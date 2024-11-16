@@ -5,12 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vCard - Personal Portfolio</title>
-
-    <!--
-    - favicon
-  -->
-    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+    <title>Pham The Tinh</title>
 
     <!--
     - custom css link
@@ -26,6 +21,10 @@
 </head>
 
 <body>
+    <button id="theme-toggle" class="theme-toggle">
+        <ion-icon name="moon-outline" class="moon"></ion-icon>
+        <ion-icon name="sunny-outline" class="sun"></ion-icon>
+    </button>
 
     <!--
     - #MAIN
@@ -48,7 +47,7 @@
                 <div class="info-content">
                     <h1 class="name" title="Richard hanrick">Pham The Tinh</h1>
 
-                    <p class="title">Backend developer</p>
+                    <p class="title">Software Engineer</p>
                 </div>
 
                 <button class="info_more-btn" data-sidebar-btn>
@@ -205,19 +204,39 @@
 
                 <section class="about-text">
                     <p>
-                        Hello! I'm Tinh, a web developer from Ho Chi Minh city, Vietnam.
+                        👋 Hey there! I'm Tinh - a code enthusiast who's currently rocking the Software Engineering
+                        world at FPT Polytechnic.
+                        Think of me as a digital craftsman who turns coffee into code (and occasionally into bugs, but
+                        hey, that's part of the journey, right? 😅).
                     </p>
 
                     <p>
-                        I'm currently studying Software Development and hope to graduate by the end of 2024.
-                        Additionally, I'm really interested in the Internet of Things and BigData. Currently, I am
-                        self-studying and practicing to improve my programming skills with the help of club members and
-                        experts at workshops held at school.
+                        🚀 Currently wearing the intern hat at SkyDev, where I'm leveling up my skills in the TypeScript
+                        universe with NestJS as my trusty sidekick.
+                        I'm that guy who gets excited about clean code architecture and might occasionally dream about
+                        design patterns (yes, I know, total tech nerd alert! 🤓).
                     </p>
 
                     <p>
-                        My ultimate goal is to become a Fullstack Web Developer and my favorite language is Java, I want
-                        to become a real expert in this field. I'm actively learning this stuff myself.
+                        💡 My toolkit includes:
+                        • Full-stack development with a special love for backend magic
+                        • Turning complex problems into elegant solutions (and sometimes into memes)
+                        • Building scalable applications that don't break when you look at them
+                        • Making databases do my bidding (PostgreSQL is my current favorite dance partner)
+                    </p>
+
+                    <p>
+                        🎯 My mission? To evolve into a Software Engineer who not only writes code but crafts
+                        experiences.
+                        I believe in the power of technology to make life better, one commit at a time.
+                        When I'm not debugging code, you'll find me exploring new technologies or contributing to
+                        open-source projects.
+                    </p>
+
+                    <p>
+                        🌱 Always learning, forever curious, and perpetually excited about the next big thing in tech.
+                        Let's connect and build something awesome together! (Warning: May include dad jokes in the
+                        comments)
                     </p>
                 </section>
 
@@ -329,6 +348,32 @@
                 </header>
 
                 <section class="timeline">
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="briefcase-outline"></ion-icon>
+                        </div>
+
+                        <h3 class="h3">Experience</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+                        <li class="timeline-item">
+                            <h4 class="h4 timeline-item-title">Software Engineer Intern - SkyDev</h4>
+                            <span>2024 - Present</span>
+
+                            <p class="timeline-text">
+                                • Developing applications using TypeScript with NestJS framework and PostgreSQL
+                                database<br>
+                                • Working with Docker for containerization and Redis for caching<br>
+                                • Implementing design patterns for scalable and maintainable application development<br>
+                                • Collaborating with team members using Git for version control<br>
+                                • Writing clean, efficient code following best practices and coding standards
+                            </p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="timeline">
 
                     <div class="title-wrapper">
                         <div class="icon-box">
@@ -357,6 +402,8 @@
                     </ol>
 
                 </section>
+
+
 
                 <section class="skill">
 
@@ -442,6 +489,10 @@
                                 <a href="https://axios-http.com/" class="icon-button php">
                                     <img src="./images/axios.webp" alt="Axios Logo">
                                     <span>Axios</span>
+                                </a>
+                                <a href="https://nestjs.com/" class="icon-button">
+                                    <img src="./images/nestjs.svg" alt="NestJS Logo">
+                                    <span>NestJS</span>
                                 </a>
                             </div>
 
@@ -626,6 +677,37 @@
 
                 </section>
 
+                <div class="project-modal-container" data-project-modal-container>
+                    <div class="overlay" data-project-overlay></div>
+
+                    <section class="project-modal">
+                        <button class="modal-close-btn" data-project-modal-close-btn>
+                            <ion-icon name="close-outline"></ion-icon>
+                        </button>
+
+                        <div class="modal-content">
+                            <h3 class="h3 modal-title"></h3>
+
+                            <div class="modal-description">
+                                <div class="technologies">
+                                    <h4>Technologies Used:</h4>
+                                    <ul class="tech-list"></ul>
+                                </div>
+
+                                <div class="main-features">
+                                    <h4>Main Features:</h4>
+                                    <ul class="features-list"></ul>
+                                </div>
+                            </div>
+
+                            <a href="#" class="form-btn" target="_blank">
+                                <ion-icon name="logo-github"></ion-icon>
+                                <span>View on GitHub</span>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+
             </article>
 
 
@@ -688,5 +770,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
+
 
 </html>

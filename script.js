@@ -36,12 +36,8 @@ for (let i = 0; i < testimonialsItem.length; i++) {
   testimonialsItem[i].addEventListener("click", function () {
     modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
     modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector(
-      "[data-testimonials-title]"
-    ).innerHTML;
-    modalText.innerHTML = this.querySelector(
-      "[data-testimonials-text]"
-    ).innerHTML;
+    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
     testimonialsModalFunc();
   });
@@ -137,3 +133,21 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
   });
 }
+
+// Theme toggle functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.querySelector("#theme-toggle");
+  const htmlElement = document.documentElement;
+
+  // Check local storage for theme preference
+  const currentTheme = localStorage.getItem("theme") || "dark";
+  htmlElement.setAttribute("data-theme", currentTheme);
+
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = htmlElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+    htmlElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  });
+});
