@@ -2224,3 +2224,44 @@ textarea.form-input::-webkit-resizer {
 .features-list li {
   margin-bottom: 8px;
 }
+
+.timeline-list {
+  position: relative;
+}
+
+.timeline-list::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -30px;
+  width: 1px;
+  height: calc(100% - 10px);
+  background: var(--vegas-gold); /* Đổi màu thành màu vàng */
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 40px; /* Khoảng cách giữa các mục */
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -33px;
+  height: 8px; /* Tăng kích thước điểm */
+  width: 8px; /* Tăng kích thước điểm */
+  background: var(--vegas-gold); /* Đổi màu thành màu vàng */
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--jet);
+  z-index: 2;
+}
+
+/* Thêm hiệu ứng hover cho các mục kinh nghiệm */
+.timeline-item:hover::after {
+  background: var(--orange-yellow-crayola);
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
